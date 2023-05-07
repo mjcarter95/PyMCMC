@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pymcmc"
+version = "0.1.0"
+description = "MCMC methods in Python."
+authors = [
+    "Matthew Carter <m.j.carter2@liverpool.ac.uk>",
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.19"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
