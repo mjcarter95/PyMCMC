@@ -8,13 +8,13 @@
 ![GitHub forks](https://img.shields.io/github/forks/mjcarter95/PyMCMC?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/mjcarter955?style=social)
 
-PyMCMC allows users to sample from probability distributions of interest using a Sequential Monte Carlo samper.
+PyMCMC allows users to sample from probability distributions of interest using various Markov Chain Monte Carlo methods.
 <!-- 
 ## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
+Before you begin, ensure you have met the following requirements:-->
 <!--- These are just example requirements. Add, duplicate or remove as required --->
-* You have installed the latest version of `<coding_language/dependency/requirement_1>`
+<!-- * You have installed the latest version of `<coding_language/dependency/requirement_1>`
 * You have a `<Windows/Linux/Mac>` machine. State which OS is supported/which is not.
 * You have read `<guide/link/documentation_related_to_project>`. -->
 
