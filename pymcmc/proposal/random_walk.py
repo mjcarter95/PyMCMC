@@ -9,19 +9,17 @@ class RandomWalkProposal:
     Propagate samples using a Gaussian random walk proposal.
 
     Attributes:
-        dim: Dimensionality of the system.
         target: Target distribution of interest.
     """
 
     def __init__(
-        self, target, dim: int, cov: float = 1.0,
+        self, target, cov: float = 1.0,
     ):
-        self.dim = dim  # Dimensionality of the target
         self.cov = cov  # Covariance of the Gaussian noise
         self.target = target  # Target distribution
 
-        cov_matrix = np.multiply(np.eye(self.dim), self.cov)
-        self.dist = multivariate_normal(np.zeros(self.dim), cov_matrix)
+        cov_matrix = np.multiply(np.eye(self.target.dim), self.cov)
+        self.dist = multivariate_normal(np.zeros(self.target.dim), cov_matrix)
 
     def rvs(self, x_cond):
         """

@@ -16,7 +16,6 @@ class HMCProposal:
     [1] https://mc-stan.org/docs/2_19/reference-manual/hamiltonian-monte-carlo.html
 
     Attributes:
-        dim: Dimensionality of the system.
         target: Target distribution of interest.
         step_size: Step size for the leapfrog integrator.
         num_steps: Number of leapfrog steps to take.
@@ -26,21 +25,19 @@ class HMCProposal:
 
     def __init__(
         self,
-        dim: int,
         target,
         num_steps: int,
         momentum_proposal,
         integrator,
         random_num_steps: bool = False,
     ):
-        self.dim = dim
         self.target = target
         self.num_steps = num_steps
         self.momentum_proposal = momentum_proposal
         self.integrator = integrator
         self.random_num_steps = random_num_steps
 
-        self.dist = multivariate_normal(np.zeros(self.dim), np.eye(self.dim))
+        self.dist = multivariate_normal(np.zeros(self.target.dim), np.eye(self.target.dim))
 
     def rvs(self, x_cond):
         """

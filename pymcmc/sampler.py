@@ -11,7 +11,6 @@ class MCMCSampler:
         self,
         num_warmup: int,
         num_samples: int,
-        dim: int,
         target,
         forward_kernel,
         sample_proposal,
@@ -21,14 +20,13 @@ class MCMCSampler:
         self.num_warmup = num_warmup  # Number of warmup iterations
         self.num_samples = num_samples  # Number of samples to draw
         self.K = num_warmup + num_samples  # Total number of iterations
-        self.dim = dim  # Dimensionality of the target
         self.target = target  # Target distribution
         self.forward_kernel = forward_kernel  # Forward kernel distribution
         self.sample_proposal = sample_proposal  # Initial sample proposal distribution
         self.verbose = verbose  # Show stdout
         self.seed = seed  # Random seed
 
-        self.x = np.zeros([self.K, self.dim])
+        self.x = np.zeros([self.K, self.target.dim])
 
     def sample(self):
         """
