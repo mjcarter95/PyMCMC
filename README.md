@@ -94,8 +94,3 @@ Or use the following BibTeX entry:
   url = {https://github.com/mjcarter95/PyMCMC}
 }
 ```
-
-## License
-<!--- If you're not sure which open license to use see https://choosealicense.com/--->
-
-This project uses the following license: [<license_name>](<link>).
