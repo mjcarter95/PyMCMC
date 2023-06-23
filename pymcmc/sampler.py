@@ -9,23 +9,24 @@ from tqdm import tqdm
 class MCMCSampler:
     def __init__(
         self,
-        K: int,
-        dim: int,
+        num_warmup: int,
+        num_samples: int,
         target,
         forward_kernel,
         sample_proposal,
         verbose: bool = False,
         seed: int = 0,
     ):
-        self.K = K  # Number of iterations
-        self.dim = dim  # Dimensionality of the target
+        self.num_warmup = num_warmup  # Number of warmup iterations
+        self.num_samples = num_samples  # Number of samples to draw
+        self.K = num_warmup + num_samples  # Total number of iterations
         self.target = target  # Target distribution
         self.forward_kernel = forward_kernel  # Forward kernel distribution
         self.sample_proposal = sample_proposal  # Initial sample proposal distribution
         self.verbose = verbose  # Show stdout
         self.seed = seed  # Random seed
 
-        self.x = np.zeros([self.K, self.dim])
+        self.x = np.zeros([self.K, self.target.dim])
 
     def sample(self):
         """
