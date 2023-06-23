@@ -80,7 +80,7 @@ We appreciate citations as they let us discover what people have been doing with
 
 To cite PyMCMC in publications use:
 
-Carter, M. (2023). PyMCMC (1.0.0). https://pypi.org/project/pysmc
+Carter, M. (2023). PyMCMC (1.0.0). https://github.com/mjcarter95/PyMCMC
 
 Or use the following BibTeX entry:
 
@@ -90,7 +90,8 @@ Or use the following BibTeX entry:
   author = {Carter, Matthew},
   year = {2023},
   month = may,
-  howpublished = {PyPI}
+  howpublished = {GitHub},
+  url = {https://github.com/mjcarter95/PyMCMC}
 }
 ```
 
