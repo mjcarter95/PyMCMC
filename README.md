@@ -94,3 +94,7 @@ Or use the following BibTeX entry:
   url = {https://github.com/mjcarter95/PyMCMC}
 }
 ```
+
+## Acknowledgements
+
+The University of Liverpool and IBM Research for co-funding the EPSRC CDT in Distributed Algorithms doctoral project titled Uncertain Heterogeneous Algorithmic Teamwork
